@@ -1,0 +1,191 @@
+@import url(http://fonts.googleapis.com/css?family=PT+Sans+Caption:400,700|Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700|Montserrat:400,700);
+
+/*************************************************************************
+/** Header
+/************************************************************************/
+
+.dreambar {
+	position:           absolute;
+	z-index:            9999;
+	top:                0;
+	left:               0;
+	width:              100%;
+	background-image:   linear-gradient(rgb(68, 68, 68) 0px, rgb(34, 34, 34) 100%);
+	border:             none;
+	width:              100%;
+	-webkit-box-shadow: 0 2px 2px rgba(64, 64, 64, 0.45);
+	-moz-box-shadow:    0 2px 2px rgba(64, 64, 64, 0.45);
+	box-shadow:         0 2px 2px rgba(64, 64, 64, 0.45);
+	padding:            0;
+	margin:             0;
+	overflow:           hidden;
+	height:             40px;
+	line-height:        38px;
+}
+
+.dreambar div[class*="dreambar-"] {
+	display:  inline-block;
+	position: relative;
+}
+
+.dreambar-fixed {
+	position: fixed;
+}
+
+.dreambar > * {
+	outline: none;
+}
+
+.dreambar.container-fluid {
+	margin:  0;
+	padding: 0;
+	width:   100%;
+}
+
+.dreambar .span4 {
+	text-align: center;
+	margin:     0;
+	padding:    0;
+	display:    inline-block;
+}
+
+.dreambar .span4:first-child {
+	text-align: left;
+}
+
+.dreambar .span4:last-child {
+	margin-right: 10px;
+	text-align:   right;
+}
+
+.dreambar-divider {
+	display:      inline;
+	border-left:  solid 1px #222;
+	border-right: solid 1px #444;
+	height:       24px;
+	width:        0;
+	margin:       8px;
+}
+
+.dreambar-menu-icon {
+	background:  url(../img/icon-dreambar-menu.png) no-repeat 0 -5px;
+	opacity:     0.6;
+	display:     inline-block;
+	color:       #fff;
+	height:      32px;
+	width:       32px;
+	margin-top:  0;
+	padding-top: 0;
+	transition:  0.3s ease-in-out;
+}
+
+.dreambar-menu-icon:hover, .dreambar-menu-icon:active, .dreambar-menu-icon:focus {
+	text-decoration: none;
+	opacity:         1.0;
+}
+
+.dreambar-hot-spot {
+	cursor: pointer;
+}
+
+.dreambar-hot-spot.open .dreambar-menu-icon {
+	background-position: -5px -5px;
+	opacity:             0.8;
+}
+
+.dreambar-app-icon {
+	background:   url(../img/logo-32x32.png) no-repeat 0 -4px;
+	opacity:      1;
+	height:       32px;
+	width:        32px;
+	display:      inline-block;
+	margin-right: 8px;
+}
+
+.dreambar-app-title {
+	font-size:    18px;
+	font-weight:  normal;
+	top:          -14px;
+	margin-right: 14px;
+	color:        #fff;
+	opacity:      0.6;
+	transition:   0.3s ease-in-out;
+	font-family:  "PT Sans Caption", "Helvetica Neue", Arial, sans-serif;
+}
+
+.dreambar-hot-spot.open .dreambar-app-title, .dreambar-app-title:hover {
+	opacity: 1;
+}
+
+.dreambar-app-menu {
+	display:            table-cell;
+	position:           absolute;
+	width:              250px;
+	left:               -500px;
+	top:                40px;
+	z-index:            1000;
+	background:         #ccc;
+	height:             100%;
+	-webkit-box-shadow: 0 2px 2px rgba(64, 64, 64, 0.45);
+	-moz-box-shadow:    0 2px 2px rgba(64, 64, 64, 0.45);
+	box-shadow:         0 2px 2px rgba(64, 64, 64, 0.45);
+}
+
+.dreambar-status {
+	font-size:  10pt;
+	color:      #fff;
+	opacity:    0.5;
+	transition: 5s ease-in-out;
+}
+
+.dreambar-controls a {
+	font-size:       24px;
+	color:           #fff;
+	position:        relative;
+	top:             -12px;
+	padding-left:    8px;
+	opacity:         0.6;
+	transition:      0.3s ease-in-out;
+	text-decoration: none !important;
+}
+
+.dreambar-controls a:hover, .dreambar-controls a:focus, .dreambar-controls a:active {
+	opacity: 1;
+}
+
+/*************************************************************************
+/** Spinner
+/************************************************************************/
+
+.loading-indicator i {
+	width:      26px;
+	height:     26px;
+	text-align: center;
+	display:    inline-block;
+}
+
+.loading-indicator i.icon-spin {
+	display: none;
+	width:   auto;
+	height:  auto;
+}
+
+.loading-indicator.spinning i[class^="icon-ellipsis-"] {
+	display: none;
+}
+
+.loading-indicator.spinning i.icon-spin {
+	display:            inline-block;
+	transition:         1s linear;
+	-moz-transition:    1s linear;
+	-webkit-transition: 1s linear;
+	color:              rgba(255, 255, 255, 1);
+	cursor:             wait;
+}
+
+/*************************************************************************
+/** Toggler
+/************************************************************************/
+
+.screen-toggler.toggled {
+}
