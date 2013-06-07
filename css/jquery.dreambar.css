@@ -1,5 +1,9 @@
 @import url(http://fonts.googleapis.com/css?family=PT+Sans+Caption:400,700|Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700|Montserrat:400,700);
 
+body {
+	overflow: hidden;
+}
+
 /*************************************************************************
 /** Header
 /************************************************************************/
@@ -36,24 +40,34 @@
 	outline: none;
 }
 
+.dreambar-app-menu ul.nav li {
+	padding:          8px 6px;
+	text-indent:      14px;
+	font-size:        18px;
+	background-image: linear-gradient(rgb(68, 68, 68) 0px, rgb(34, 34, 34) 100%);
+}
+
+.dreambar-app-menu ul.nav li a {
+	color: #fff;
+}
+
 .dreambar.container-fluid {
 	margin:  0;
 	padding: 0;
 	width:   100%;
 }
 
-.dreambar .span4 {
-	text-align: center;
-	margin:     0;
-	padding:    0;
-	display:    inline-block;
+.dreambar .span6 {
+	margin:  0;
+	padding: 0;
+	display: inline-block;
 }
 
-.dreambar .span4:first-child {
+.dreambar .span6:first-child {
 	text-align: left;
 }
 
-.dreambar .span4:last-child {
+.dreambar .span6:last-child {
 	margin-right: 10px;
 	text-align:   right;
 }
@@ -73,7 +87,7 @@
 	display:     inline-block;
 	color:       #fff;
 	height:      32px;
-	width:       32px;
+	width:       16px;
 	margin-top:  0;
 	padding-top: 0;
 	transition:  0.3s ease-in-out;
@@ -103,14 +117,13 @@
 }
 
 .dreambar-app-title {
-	font-size:    18px;
-	font-weight:  normal;
-	top:          -14px;
-	margin-right: 14px;
-	color:        #fff;
-	opacity:      0.6;
-	transition:   0.3s ease-in-out;
-	font-family:  "PT Sans Caption", "Helvetica Neue", Arial, sans-serif;
+	font-size:      18px;
+	font-weight:    normal;
+	color:          #fff;
+	opacity:        0.6;
+	transition:     0.3s ease-in-out;
+	font-family:    "PT Sans Caption", "Helvetica Neue", Arial, sans-serif;
+	vertical-align: top;
 }
 
 .dreambar-hot-spot.open .dreambar-app-title, .dreambar-app-title:hover {
@@ -132,10 +145,13 @@
 }
 
 .dreambar-status {
-	font-size:  10pt;
-	color:      #fff;
-	opacity:    0.5;
-	transition: 5s ease-in-out;
+	text-align:     right;
+	font-family:    "Helvetica Neue Light", "Arial Narrow", sans-serif;
+	font-size:      14px;
+	color:          #fff;
+	opacity:        1;
+	transition:     5s ease-in-out;
+	vertical-align: top;
 }
 
 .dreambar-controls a {
@@ -184,8 +200,26 @@
 }
 
 /*************************************************************************
-/** Toggler
+/** control bar
 /************************************************************************/
 
-.screen-toggler.toggled {
+.dreambar-controls #dreambar-controls-signin {
+	display: inline-block;
 }
+
+.dreambar-controls #dreambar-controls-signout {
+	display: none;
+}
+
+.dreambar-controls #dreambar-controls-settings {
+	display: none;
+}
+
+.dreambar-controls.auth #dreambar-controls-signin, .dreambar-controls.auth #dreambar-controls-settings {
+	display: none;
+}
+
+.dreambar-controls.auth #dreambar-controls-signout, .dreambar-controls.auth #dreambar-controls-settings {
+	display: inline-block;
+}
+

@@ -1,4 +1,4 @@
 jquery-dreambar
 ===============
 
-The jQuery DreamBar plug-in
+The most excellent DreamBar plug-in

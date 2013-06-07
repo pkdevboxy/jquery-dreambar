@@ -13,16 +13,41 @@
 	<link rel="stylesheet" href="css/jquery.dreambar.css">
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
 	<script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+	<style>
+		body {
+			background-color: red;
+		}
+
+		#client-container {
+			margin-top:       40px;
+			position:         relative;
+			background-color: #aaa;
+			color:            #fff;
+			height:           100%;
+			width:            auto;
+			border:           1px solid #ccc;
+			padding:          8px;
+		}
+
+		footer {
+			position:         relative;
+			background-color: #aaa;
+			color:            #fff;
+			height:           40px;
+			width:            auto;
+			border:           1px solid #ccc;
+			padding:          4px;
+		}
+	</style>
 </head>
 <body>
 <header></header>
-<div id="client-container"
-	 style="margin-top: 40px; position: relative; background-color: #aaa; color:#fff; height: 100%; width: auto; border: 1px solid #ccc;">Client Container
-	<footer style="position: relative; background-color: #aaa; color:#fff; height: 40px; width: auto; border: 1px solid #ccc;">Footer</footer>
-</div>
+<div id="client-container">Client Container</div>
+<footer>Footer</footer>
 <script src="jquery.dreambar.js"></script>
 <script type="text/javascript">
-var $_dreamBar = new DreamFactory.Platform.UI.DreamBar({});
+var $_dreamBar = new DreamFactory.Platform.UI.DreamBar();
+$_dreamBar.setTitle('My Awesome App').setStatus('Initializing');
 </script>
 </body>
 </html>
