@@ -87,7 +87,7 @@ body {
 	display:     inline-block;
 	color:       #fff;
 	height:      32px;
-	width:       16px;
+	width:       24px;
 	margin-top:  0;
 	padding-top: 0;
 	transition:  0.3s ease-in-out;
@@ -114,6 +114,10 @@ body {
 	width:        32px;
 	display:      inline-block;
 	margin-right: 8px;
+}
+
+.dreambar-app-icon.spinning {
+	vertical-align: top;
 }
 
 .dreambar-app-title {
@@ -174,29 +178,25 @@ body {
 /************************************************************************/
 
 .loading-indicator i {
-	width:      26px;
-	height:     26px;
-	text-align: center;
-	display:    inline-block;
+	display:        inline-block;
+	vertical-align: top;
 }
 
 .loading-indicator i.icon-spin {
 	display: none;
-	width:   auto;
-	height:  auto;
 }
 
-.loading-indicator.spinning i[class^="icon-ellipsis-"] {
-	display: none;
+.dreambar-app-icon.loading-indicator.spinning {
+	background: transparent;
+	text-align: center;
+	font-size:  21px;
+	margin-top: 8px;
 }
 
 .loading-indicator.spinning i.icon-spin {
-	display:            inline-block;
-	transition:         1s linear;
-	-moz-transition:    1s linear;
-	-webkit-transition: 1s linear;
-	color:              rgba(255, 255, 255, 1);
-	cursor:             wait;
+	display: inline-block;
+	color:   rgba(255, 255, 255, 1);
+	cursor:  wait;
 }
 
 /*************************************************************************

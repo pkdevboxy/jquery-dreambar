@@ -78,6 +78,36 @@ DreamFactory.Platform.UI = DreamFactory.Platform.UI || {};
     },
 
     /**
+     * Set the auth flag
+     * @param how
+     */
+    setAuth: function(how) {
+      if (how) $('.dreambar-controls').addClass('auth');
+      else $('.dreambar-controls').removeClass('auth');
+    },
+
+    /**
+     * Add an item to the menu
+     * @param href
+     * @param title
+     * @param active
+     * @param attributes
+     */
+    addMenuItem: function(href, title, active, attributes) {
+      attributes = attributes || '';
+      if (active) active = 'active';
+      $('.dreambar-app-menu ul.nav').append('<li class="' + active + '"><a href="' + href + '" ' + attributes + '>' + title + '</a></li>');
+    },
+
+    /**
+     * Remove all items from the menu
+     */
+    clearMenu: function() {
+      $('.dreambar-app-menu ul.nav').empty();
+      return this;
+    },
+
+    /**
      * Set up the bar...
      */
     init: function() {
@@ -86,8 +116,8 @@ DreamFactory.Platform.UI = DreamFactory.Platform.UI || {};
 
       //  Build the header structure
       $_bar.append('	<div class="dreambar-hot-spot span6 pull-left">' +
-                     '		<span class="dreambar-menu-icon loading-indicator"><i class="icon-spinner icon-spin"></i></span>' +
-                     '		<span class="dreambar-app-icon"></span>' +
+                     '		<span class="dreambar-menu-icon"></span>' +
+                     '		<span class="dreambar-app-icon loading-indicator spinning"><i class="icon-spinner icon-spin"></i></span>' +
                      '		<span class="dreambar-app-title"></span>' +
                      '		<div class="dreambar-divider"></div>' +
                      '	</div>' +
@@ -108,6 +138,7 @@ DreamFactory.Platform.UI = DreamFactory.Platform.UI || {};
       this.options.$_bar = $_bar;
 
       var $_menu = $('.dreambar-app-menu');
+      var $_icon = $('.dreambar-app-icon');
       var $_fsToggle = $('.dreambar-toggle-fullscreen');
 
       //  Hotspot toggler
@@ -208,6 +239,24 @@ DreamFactory.Platform.UI = DreamFactory.Platform.UI || {};
       });
 
       /**
+       * Shows the ajax spinner
+       * @private
+       */
+      var _showSpinner = function() {
+        if (!$_icon.hasClass('spinning'))
+          $_icon.addClass('spinning');
+      };
+
+      /**
+       * Hides the ajax spinner
+       * @private
+       */
+      var _hideSpinner = function() {
+        if ($_icon.hasClass('spinning'))
+          $_icon.removeClass('spinning');
+      };
+
+      /**
        * Internal resize method
        * @private
        */
@@ -231,6 +280,21 @@ DreamFactory.Platform.UI = DreamFactory.Platform.UI || {};
         _onResize(this, _self);
       }).trigger('resize');
 
+      /**
+       * Ajax start
+       */
+      $(document).ajaxStart(function() {
+        _showSpinner();
+      });
+
+      /**
+       * Ajax stop
+       */
+      $(document).ajaxStop(function() {
+        _hideSpinner();
+      });
+
+      _hideSpinner();
       return _self;
     }
   }

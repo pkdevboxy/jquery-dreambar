@@ -42,10 +42,23 @@
 </head>
 <body>
 <header></header>
-<div id="client-container">Client Container</div>
+<div id="client-container">
+	<h2>Client Container</h2>
+
+	<p>
+		<button class="btn btn-success" onClick="$.get('http://www.wikipedia.com/')">Spin</button>
+	</p>
+	<p>
+		<button class="btn btn-failure" onClick="$_dreamBar.setStatus('I am the status')">Status</button>
+	</p>
+	<p>
+		<button class="btn btn-warning" onClick="$_dreamBar.setAuth(!_auth); _auth = !_auth;">Auth</button>
+	</p>
+</div>
 <footer>Footer</footer>
 <script src="jquery.dreambar.js"></script>
 <script type="text/javascript">
+var _auth = false;
 var $_dreamBar = new DreamFactory.Platform.UI.DreamBar();
 $_dreamBar.setTitle('My Awesome App').setStatus('Initializing');
 </script>
