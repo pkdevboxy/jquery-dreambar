@@ -2,7 +2,11 @@
   <dictionary name="jablan">
     <words>
       <w>dreambar</w>
+      <w>dreampanel</w>
       <w>hotspot</w>
+      <w>popout</w>
+      <w>popoutsidebar</w>
+      <w>undock</w>
     </words>
   </dictionary>
 </component>
