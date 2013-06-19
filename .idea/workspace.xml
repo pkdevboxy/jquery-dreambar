@@ -2,12 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0e5f9607-0cb6-49ae-ae11-8f7ed1b3377f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/jquery.dreampanel.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery.dreampanel.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/panel.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/jablan.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/jablan.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/jquery-dreambar.iml" afterPath="$PROJECT_DIR$/.idea/jquery-dreambar.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jquery.dreambar.js" afterPath="$PROJECT_DIR$/jquery.dreambar.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="jquery-dreambar.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="0e5f9607-0cb6-49ae-ae11-8f7ed1b3377f" time="1370634437053" ignored="false" />
+    <file path="/Dummy.txt" changelist="0e5f9607-0cb6-49ae-ae11-8f7ed1b3377f" time="1371569358830" ignored="false" />
     <file path="/jquery.dreambar.js" changelist="0e5f9607-0cb6-49ae-ae11-8f7ed1b3377f" time="1370631965485" ignored="false" />
     <file path="/dsp.sdk.js" changelist="0e5f9607-0cb6-49ae-ae11-8f7ed1b3377f" time="1370530108466" ignored="false" />
     <file path="/a.dummy" changelist="0e5f9607-0cb6-49ae-ae11-8f7ed1b3377f" time="1370630723963" ignored="false" />
@@ -23,6 +30,9 @@
     <file path="$PROJECT_DIR$/../../omega/omega-client/index.php" changelist="0e5f9607-0cb6-49ae-ae11-8f7ed1b3377f" time="1370630201254" ignored="false" />
     <file path="/index.php" changelist="0e5f9607-0cb6-49ae-ae11-8f7ed1b3377f" time="1370629761000" ignored="false" />
     <file path="$PROJECT_DIR$/../../tools/dsp-package-builder/.idea/workspace.xml" changelist="0e5f9607-0cb6-49ae-ae11-8f7ed1b3377f" time="1370634451084" ignored="false" />
+    <file path="/jquery.dreampanel.js" changelist="0e5f9607-0cb6-49ae-ae11-8f7ed1b3377f" time="1371608101005" ignored="false" />
+    <file path="/jquery.dreampanel.css" changelist="0e5f9607-0cb6-49ae-ae11-8f7ed1b3377f" time="1371574228767" ignored="false" />
+    <file path="/panel.html" changelist="0e5f9607-0cb6-49ae-ae11-8f7ed1b3377f" time="1371595515921" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +51,43 @@
     <favorites_list name="jquery-dreambar" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="panel.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/panel.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="19" column="30" selection-start="910" selection-end="910" vertical-scroll-proportion="-11.875">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="jquery.dreampanel.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/jquery.dreampanel.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="84" column="102" selection-start="3002" selection-end="3002" vertical-scroll-proportion="0.23300971">
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+                <element signature="e#635#670#0" expanded="true" />
+                <element signature="e#738#937#0" expanded="true" />
+                <element signature="e#955#1073#0" expanded="true" />
+                <element signature="e#2617#2773#0" expanded="true" />
+                <element signature="e#3033#3121#0" expanded="true" />
+                <element signature="e#4763#5099#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="jquery.dreampanel.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/jquery.dreampanel.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="26" column="0" selection-start="514" selection-end="514" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -67,14 +113,18 @@
         <option value="$PROJECT_DIR$/css/jquery.dreambar.css" />
         <option value="$PROJECT_DIR$/jquery.dreambar.js" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/panel.html" />
+        <option value="$PROJECT_DIR$/css/jquery.dreampanel.css" />
+        <option value="$PROJECT_DIR$/jquery.dreampanel.js" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
     <option name="x" value="1600" />
+    <option name="y" value="22" />
     <option name="width" value="1920" />
-    <option name="height" value="1056" />
+    <option name="height" value="1154" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -143,7 +193,7 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="recentsLimit" value="5" />
-    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
+    <property name="options.lastSelected" value="reference.settings.ide.settings.web.browsers" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../javascript-sdk" />
     <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
@@ -157,33 +207,20 @@
           </mappings>
         </serverdata>
       </server>
-      <server id="149e8371-3161-4907-80cc-69baa49b8352">
-        <serverdata>
-          <mappings>
-            <mapping local="$PROJECT_DIR$" />
-          </mappings>
-        </serverdata>
+      <server id="11be4a15-827d-482c-b7fd-b57012870ff3">
+        <serverdata />
       </server>
-      <server id="1fab4a56-92b6-4c5c-af74-b844512ff080">
-        <serverdata>
-          <mappings>
-            <mapping local="$PROJECT_DIR$" />
-          </mappings>
-        </serverdata>
+      <server id="13e41f6e-a2a9-4a7f-9e08-2b6b460deef8">
+        <serverdata />
       </server>
-      <server id="43971990-aa29-426e-b485-ae1e6885d2fe">
-        <serverdata>
-          <mappings>
-            <mapping local="$PROJECT_DIR$" />
-          </mappings>
-        </serverdata>
+      <server id="288efb7b-c19a-4bc2-9692-faaecc90aa0c">
+        <serverdata />
       </server>
-      <server id="4c6b4d8a-3eef-4b87-af4e-c47472511f14">
-        <serverdata>
-          <mappings>
-            <mapping local="$PROJECT_DIR$" />
-          </mappings>
-        </serverdata>
+      <server id="43aff84a-bb0e-432f-ac6b-22e5874260ab">
+        <serverdata />
+      </server>
+      <server id="5d90d7f9-2b2c-4a68-884a-67c9e477e0b0">
+        <serverdata />
       </server>
       <server id="66719f12-cfe1-407f-af06-1df7b8d7a8f0">
         <serverdata>
@@ -192,33 +229,11 @@
           </mappings>
         </serverdata>
       </server>
-      <server id="7bf5ac3c-9813-4056-9757-2f8181f60960">
-        <serverdata>
-          <mappings>
-            <mapping local="$PROJECT_DIR$" />
-          </mappings>
-        </serverdata>
+      <server id="8216958d-8ff7-4670-837e-d055a0974525">
+        <serverdata />
       </server>
-      <server id="8da9ca69-9244-4807-9b20-343f6cadfa8f">
-        <serverdata>
-          <mappings>
-            <mapping local="$PROJECT_DIR$" />
-          </mappings>
-        </serverdata>
-      </server>
-      <server id="a6e8ab6f-c5dd-45e3-aefa-1d0b66e8e6cf">
-        <serverdata>
-          <mappings>
-            <mapping local="$PROJECT_DIR$" />
-          </mappings>
-        </serverdata>
-      </server>
-      <server id="aa799b44-ece0-4e57-8dbc-3540d5086e5e">
-        <serverdata>
-          <mappings>
-            <mapping local="$PROJECT_DIR$" />
-          </mappings>
-        </serverdata>
+      <server id="a03cfc0f-dd2c-491b-bc66-be7d71db1bb2">
+        <serverdata />
       </server>
       <server id="ae4a57ae-a252-4e75-8c87-f002a7ef0721">
         <serverdata>
@@ -227,12 +242,8 @@
           </mappings>
         </serverdata>
       </server>
-      <server id="af3b3e9b-91c1-479f-a26e-6bf41aae8982">
-        <serverdata>
-          <mappings>
-            <mapping local="$PROJECT_DIR$" />
-          </mappings>
-        </serverdata>
+      <server id="b1709c1b-8815-4ff9-86e4-6daa5591f348">
+        <serverdata />
       </server>
       <server id="b2a42ed5-1b36-4f22-a3e7-5e8da3d3527c">
         <serverdata>
@@ -241,21 +252,13 @@
           </mappings>
         </serverdata>
       </server>
-      <server id="bcc0133f-79bb-42f3-9748-672e871b572e">
-        <serverdata>
-          <mappings>
-            <mapping local="$PROJECT_DIR$" />
-          </mappings>
-        </serverdata>
+      <server id="b2b46e39-681e-41a3-806d-838edda284b7">
+        <serverdata />
+      </server>
+      <server id="cd0a5660-eb21-4b38-9351-8a27fa9a8dda">
+        <serverdata />
       </server>
       <server id="ce7eb43d-a512-4d14-8ceb-2797eaa18a9e">
-        <serverdata>
-          <mappings>
-            <mapping local="$PROJECT_DIR$" />
-          </mappings>
-        </serverdata>
-      </server>
-      <server id="d3a5a741-31d8-4bc4-8277-63dd533f89a2">
         <serverdata>
           <mappings>
             <mapping local="$PROJECT_DIR$" />
@@ -269,10 +272,23 @@
           </mappings>
         </serverdata>
       </server>
+      <server id="da6e81a9-f1db-400e-9d48-a1cb818cb757">
+        <serverdata />
+      </server>
+      <server id="e09a2046-4436-4b84-a4de-ff46c103da6d">
+        <serverdata />
+      </server>
+      <server id="e482ee72-0ac0-4247-a662-d4bdb26a456d">
+        <serverdata />
+      </server>
+      <server id="ee22efc6-5080-44d5-a242-cba4ac0e0e72">
+        <serverdata />
+      </server>
     </servers>
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/img" />
     </key>
   </component>
@@ -346,29 +362,30 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1600" y="0" width="1920" height="1056" extended-state="0" />
+    <frame x="1600" y="22" width="1920" height="1154" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39823982" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1292735" sideWeight="0.45386267" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Regex Tester" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="CSS-X-Fire" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Mongo Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1292735" sideWeight="0.60176015" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39823982" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1292735" sideWeight="0.45386267" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Mongo Runner" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13233724" sideWeight="0.60176015" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Mongo Runner" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Mongo Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32939914" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -472,19 +489,63 @@
         <state line="3" column="19" selection-start="52" selection-end="52" vertical-scroll-proportion="0.052570093" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jquery.dreambar.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="80" column="24" selection-start="2291" selection-end="2291" vertical-scroll-proportion="0.72497123" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="12" selection-start="1421" selection-end="1421" vertical-scroll-proportion="0.42374855" />
+        <state line="36" column="12" selection-start="1321" selection-end="1321" vertical-scroll-proportion="0.45924452">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/font-awesome.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="49" selection-start="765" selection-end="765" vertical-scroll-proportion="0.22123894">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/jquery.dreambar.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="189" column="27" selection-start="4263" selection-end="4274" vertical-scroll-proportion="0.59183675" />
+        <state line="165" column="23" selection-start="3708" selection-end="3708" vertical-scroll-proportion="0.6262136">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jquery.dreambar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="8" selection-start="894" selection-end="894" vertical-scroll-proportion="0.13176008">
+          <folding>
+            <element signature="e#1155#9020#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/jquery.dreampanel.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="0" selection-start="514" selection-end="514" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/panel.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="30" selection-start="910" selection-end="910" vertical-scroll-proportion="-11.875">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jquery.dreampanel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="84" column="102" selection-start="3002" selection-end="3002" vertical-scroll-proportion="0.23300971">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#635#670#0" expanded="true" />
+            <element signature="e#738#937#0" expanded="true" />
+            <element signature="e#955#1073#0" expanded="true" />
+            <element signature="e#2617#2773#0" expanded="true" />
+            <element signature="e#3033#3121#0" expanded="true" />
+            <element signature="e#4763#5099#0" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
   </component>
