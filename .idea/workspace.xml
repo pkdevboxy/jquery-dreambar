@@ -2,28 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0e5f9607-0cb6-49ae-ae11-8f7ed1b3377f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/jquery.dreampanel.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/panel.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/cssxfire.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/jquery-dreambar.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/jablan.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/jablan.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jquery.dreambar.js" afterPath="$PROJECT_DIR$/jquery.dreambar.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jquery.dreampanel.js" afterPath="$PROJECT_DIR$/jquery.dreampanel.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="jquery-dreambar.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="0e5f9607-0cb6-49ae-ae11-8f7ed1b3377f" time="1371656147140" ignored="false" />
+    <file path="/Dummy.txt" changelist="0e5f9607-0cb6-49ae-ae11-8f7ed1b3377f" time="1371664993395" ignored="false" />
     <file path="/jquery.dreambar.js" changelist="0e5f9607-0cb6-49ae-ae11-8f7ed1b3377f" time="1370631965485" ignored="false" />
     <file path="/dsp.sdk.js" changelist="0e5f9607-0cb6-49ae-ae11-8f7ed1b3377f" time="1370530108466" ignored="false" />
     <file path="/a.dummy" changelist="0e5f9607-0cb6-49ae-ae11-8f7ed1b3377f" time="1370630723963" ignored="false" />
@@ -39,13 +22,22 @@
     <file path="$PROJECT_DIR$/../../omega/omega-client/index.php" changelist="0e5f9607-0cb6-49ae-ae11-8f7ed1b3377f" time="1370630201254" ignored="false" />
     <file path="/index.php" changelist="0e5f9607-0cb6-49ae-ae11-8f7ed1b3377f" time="1370629761000" ignored="false" />
     <file path="$PROJECT_DIR$/../../tools/dsp-package-builder/.idea/workspace.xml" changelist="0e5f9607-0cb6-49ae-ae11-8f7ed1b3377f" time="1370634451084" ignored="false" />
-    <file path="$PROJECT_DIR$/../../web/web-csp/config/common.config.php" changelist="0e5f9607-0cb6-49ae-ae11-8f7ed1b3377f" time="1370870466933" ignored="false" />
+    <file path="$PROJECT_DIR$/../../web/web-csp/config/common.config.php" changelist="0e5f9607-0cb6-49ae-ae11-8f7ed1b3377f" time="1371657103723" ignored="false" />
     <file path="/common.config.php" changelist="0e5f9607-0cb6-49ae-ae11-8f7ed1b3377f" time="1370870444987" ignored="false" />
     <file path="/vagrant-vm.md" changelist="0e5f9607-0cb6-49ae-ae11-8f7ed1b3377f" time="1371501276024" ignored="false" />
     <file path="$PROJECT_DIR$/../../omega/omega-server/web/public/js/Omega.js" changelist="0e5f9607-0cb6-49ae-ae11-8f7ed1b3377f" time="1371486061992" ignored="false" />
     <file path="$PROJECT_DIR$/../../../kisma/src/Kisma/Core/Utility/FilterInput.php" changelist="0e5f9607-0cb6-49ae-ae11-8f7ed1b3377f" time="1371498155800" ignored="false" />
     <file path="/jquery.dreampanel.js" changelist="0e5f9607-0cb6-49ae-ae11-8f7ed1b3377f" time="1371656000477" ignored="false" />
     <file path="/panel.html" changelist="0e5f9607-0cb6-49ae-ae11-8f7ed1b3377f" time="1371656058522" ignored="false" />
+    <file path="$PROJECT_DIR$/../../web/web-csp/web/public/web-core/js/templates.js" changelist="0e5f9607-0cb6-49ae-ae11-8f7ed1b3377f" time="1371656758662" ignored="false" />
+    <file path="$PROJECT_DIR$/../../web/web-csp/web/protected/controllers/RestController.php" changelist="0e5f9607-0cb6-49ae-ae11-8f7ed1b3377f" time="1371659775519" ignored="false" />
+    <file path="/RestController.php" changelist="0e5f9607-0cb6-49ae-ae11-8f7ed1b3377f" time="1371659727067" ignored="false" />
+    <file path="$PROJECT_DIR$/../../web/web-csp/web/protected/models/Service.php" changelist="0e5f9607-0cb6-49ae-ae11-8f7ed1b3377f" time="1371658186609" ignored="false" />
+    <file path="/Service.php" changelist="0e5f9607-0cb6-49ae-ae11-8f7ed1b3377f" time="1371658172756" ignored="false" />
+    <file path="$PROJECT_DIR$/../../web/web-csp/src/Platform/Utility/ServiceHandler.php" changelist="0e5f9607-0cb6-49ae-ae11-8f7ed1b3377f" time="1371658611067" ignored="false" />
+    <file path="/ServiceHandler.php" changelist="0e5f9607-0cb6-49ae-ae11-8f7ed1b3377f" time="1371658609199" ignored="false" />
+    <file path="$PROJECT_DIR$/../../web/web-csp/src/Platform/Services/RestService.php" changelist="0e5f9607-0cb6-49ae-ae11-8f7ed1b3377f" time="1371659834729" ignored="false" />
+    <file path="$PROJECT_DIR$/../../web/web-csp/src/Platform/Services/SystemManager.php" changelist="0e5f9607-0cb6-49ae-ae11-8f7ed1b3377f" time="1371659880013" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,25 +56,7 @@
     <favorites_list name="jquery-dreambar" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="panel.html" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/panel.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="0" selection-start="1344" selection-end="1344" vertical-scroll-proportion="0.90909094">
-              <folding>
-                <element signature="tag#html#0" expanded="true" />
-                <element signature="tag#head#0;tag#html#0" expanded="true" />
-                <element signature="tag#body#0;tag#html#0" expanded="true" />
-                <element signature="tag#div#0;tag#body#0;tag#html#0" expanded="true" />
-                <element signature="tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="true" />
-                <element signature="tag#div#1;tag#body#0;tag#html#0" expanded="true" />
-                <element signature="tag#script#3;tag#body#0;tag#html#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -117,9 +91,9 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="1600" />
-    <option name="width" value="1920" />
-    <option name="height" value="1056" />
+    <option name="x" value="1599" />
+    <option name="width" value="1922" />
+    <option name="height" value="1057" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -147,7 +121,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -168,16 +141,17 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="options.lastSelected" value="JavaScript.Libraries" />
     <property name="recentsLimit" value="5" />
+    <property name="options.lastSelected" value="JavaScript.Libraries" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../javascript-sdk" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="PublishConfig">
     <servers>
@@ -381,10 +355,9 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1600" y="0" width="1920" height="1056" extended-state="6" />
-    <editor active="true" />
+    <frame x="1599" y="0" width="1922" height="1057" extended-state="6" />
+    <editor active="false" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32967034" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CSS-X-Fire" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -403,6 +376,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32967034" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -475,31 +449,32 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/jquery.dreampanel.js">
+    <entry file="file://$PROJECT_DIR$/panel.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="e#635#761#0" expanded="true" />
-            <element signature="e#1046#1166#0" expanded="true" />
+            <element signature="tag#head#0;tag#html#0" expanded="true" />
+            <element signature="tag#div#0;tag#body#0;tag#html#0" expanded="true" />
+            <element signature="tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="true" />
+            <element signature="tag#div#1;tag#body#0;tag#html#0" expanded="true" />
+            <element signature="tag#script#3;tag#body#0;tag#html#0" expanded="true" />
           </folding>
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jquery.dreampanel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/jquery.dreambar.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="189" column="27" selection-start="4263" selection-end="4274" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="189" column="27" selection-start="4263" selection-end="4274" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/jquery.dreampanel.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="153" column="36" selection-start="5789" selection-end="5789" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#635#761#0" expanded="true" />
-            <element signature="e#1046#1166#0" expanded="true" />
-          </folding>
-        </state>
+        <state line="153" column="36" selection-start="5789" selection-end="5789" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/jquery.dreambar.js">
@@ -528,11 +503,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="19" selection-start="52" selection-end="52" vertical-scroll-proportion="0.052570093" />
-      </provider>
       <provider editor-type-id="MarkdownPreviewEditor">
         <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="19" selection-start="52" selection-end="52" vertical-scroll-proportion="0.052570093" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/jquery.dreambar.js">
@@ -542,50 +517,37 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/jquery.dreambar.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="189" column="27" selection-start="4263" selection-end="4274" vertical-scroll-proportion="0.10511363">
-          <folding />
-        </state>
+        <state line="189" column="27" selection-start="4263" selection-end="4274" vertical-scroll-proportion="0.10511363" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vagrant-vm.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="336" column="0" selection-start="18012" selection-end="18012" vertical-scroll-proportion="0.30851063" />
-      </provider>
       <provider editor-type-id="MarkdownPreviewEditor">
         <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="336" column="0" selection-start="18012" selection-end="18012" vertical-scroll-proportion="0.30851063" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="12" selection-start="1421" selection-end="1421" vertical-scroll-proportion="0.26071844">
-          <folding />
-        </state>
+        <state line="40" column="12" selection-start="1421" selection-end="1421" vertical-scroll-proportion="0.26071844" />
       </provider>
     </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavascriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/DHTML.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="608" column="20" selection-start="9004" selection-end="9004" vertical-scroll-proportion="0.33295712">
-          <folding />
-        </state>
+        <state line="608" column="20" selection-start="9004" selection-end="9004" vertical-scroll-proportion="0.33295712" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/jquery.dreampanel.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="84" column="32" selection-start="2889" selection-end="2889" vertical-scroll-proportion="0.62641084">
-          <folding>
-            <element signature="e#635#761#0" expanded="true" />
-            <element signature="e#1046#1166#0" expanded="true" />
-          </folding>
-        </state>
+        <state line="84" column="32" selection-start="2889" selection-end="2889" vertical-scroll-proportion="0.62641084" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/panel.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="0" selection-start="1344" selection-end="1344" vertical-scroll-proportion="0.90909094">
+        <state line="22" column="6" selection-start="951" selection-end="951" vertical-scroll-proportion="0.382387">
           <folding>
-            <element signature="tag#html#0" expanded="true" />
             <element signature="tag#head#0;tag#html#0" expanded="true" />
-            <element signature="tag#body#0;tag#html#0" expanded="true" />
             <element signature="tag#div#0;tag#body#0;tag#html#0" expanded="true" />
             <element signature="tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="true" />
             <element signature="tag#div#1;tag#body#0;tag#html#0" expanded="true" />
