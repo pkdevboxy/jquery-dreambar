@@ -1,286 +1,161 @@
+/**
+ * Copyright 2013 DreamFactory Software, Inc. <support@dreamfactory.com>
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/**
+ * DreamPanel jQuery plugin
+ * @param defaults
+ * @param $
+ * @param window
+ * @param [document]
+ * @param [undefined]
+ */
 ;
-(function($) {
-	$.widget("ui.dreampanel", {
+(function(defaults, $, window, document, undefined) {
 
-		VERSION: '1.0',
+	$.extend({
+		// Function to change the default properties of the plugin
+		// Usage: jQuery.dreamPanelSetup({prop:val,...});
+		dreamPanelSetup: function(options) {
+			return $.extend(defaults, options);
+		}
+	}).fn.extend({
 
-		options: {
-			renderExpanded:  $.noop,
-			renderCollapsed: $.noop,
-			persist:         $.noop,
-			collapsedWidth:  30,
-			expandedWidth:   200,
-			dockText:        'Dock',
-			undockText:      'Undock',
-			dockTitle:       'Dock the panel so it can always be seen',
-			undockTitle:     'Undock the panel so it is hidden when not in focus'},
+			/**
+			 * Constructor: jQuery(selector).dreamPanel({property:'value'});
+			 * @param [options]
+			 * @returns {*}
+			 */
+			dreamPanel: function(options) {
+				var _options = $.extend({}, defaults, options || {});
 
-		CLASS_NAMES: {
-			dreampanel:  'dreampanel',
-			placeholder: 'dreampanel-placeholder',
-			detached:    'dreampanel-detached',
-			expanding:   'dreampanel-expanding',
-			expanded:    'dreampanel-expanded',
-			collapsed:   'dreampanel-collapsed',
-			collapsing:  'dreampanel-collapsing'
-		},
+				return $(this).each(function() {
+					var _self = this, $_self = $(this);
 
-		_create:                  function() {
-			_.bindAll(this);
+					//	Store some refs
+					_options.$_buddy = $(_options.rightBorder);
 
-			if (!this.element.data("dream.panel")) {
-				this.element.data("dream.panel", true);
-				this.element.bind("updateOffsets.popout", this.updateOffsets);
-				this.element.bind("updateOffsets.reset", this.reset);
+					//	Add the collapsed title container if not there
+					_options.$_title = $('.dreampanel-collapsed-title', $_self);
+					_options.$_panelContent = $('.dreampanel .dreampanel-content');
 
-				this.element.delegate(".ui-dock", "click", _.bind(function(b) {
-					$(b.currentTarget).tipsy("hide").removeData("tipsy");
-					this.dock(true);
-					b.preventDefault()
-				}, this));
+					if (!_options.$_title.length) {
+						$_self.append('<div class="dreampanel-collapsed-title">' + _options.collapsedTitle + '</div>');
+						_options.$_title = $('.dreampanel-collapsed-title', $_self);
+					}
 
-				this.element.delegate(".ui-undock", "click", _.bind(function(b) {
-					$(b.currentTarget).tipsy("hide").removeData("tipsy");
-					this.undock(true);
-					b.preventDefault()
-				}, this));
-				this.isDocked = this.options.isDocked;
-				this.useTransitions = !jQuery.browser.msie || parseInt(jQuery.browser.version, 10) > 8;
-				if (this.options.isDocked) {
-					this._renderUnDock()
-				} else {
-					this._enableUndockedMode()
-				}
-				this.updateOffsets()
-			}
-		}, _getUndockedClasses:   function() {
-			return[this.CLASS_NAMES.detached].join(" ")
-		}, _getUndockedStates:    function() {
-			return[this.CLASS_NAMES.collapsed, this.CLASS_NAMES.collapsing, this.CLASS_NAMES.expanding, this.CLASS_NAMES.expanded].join(" ")
-		}, _setUndockedState:     function(b) {
-			this.element.removeClass(this._getUndockedStates());
-			this.element.addClass(b)
-		}, unbindHoverIntent:     function() {
-			this.element.off("mouseleave mouseenter mousemove");
-			this.element[0].hoverIntent_s = 0
-		}, bindHoverIntent:       function() {
-			this.element.hoverIntent({interval: 40, over: this.expand, out: this.collapse, sensitivity: 8})
-		}, _unbindUnDockedEvents: function() {
-			this.unbindHoverIntent();
-			$(window).unbind("scroll", this.updateOffsets)
-		}, _bindUnDockedEvents:   function(b) {
-			this.bindHoverIntent();
-			$(window).scroll(this.updateOffsets);
-			this.element[0].hoverIntent_s = b ? 1 : 0
-		}, isUndocked:            function() {
-			return this.element.hasClass(this.CLASS_NAMES.detached)
-		}, _registerMousePos:     function(b) {
-			this._clientX = b.clientX;
-			this._clientY = b.clientY
-		}, _handleDropdown:       function() {
-			$(document).mousemove(this._registerMousePos);
-			if (this.isUndocked() && AJS.InlineLayer.current.offsetTarget().closest(this.element).size()) {
-				this.unbindHoverIntent();
-				JIRA.one(AJS.InlineLayer.EVENTS.hide, _.bind(function() {
-					_.defer(_.bind(function() {
-						if (!AJS.InlineLayer.current) {
-							if (JIRA.Dialog.current || this._clientX > this.element.offset().left + this.element.outerWidth()) {
-								this.collapse(JIRA.Dialog.current ? false : true);
-								this.bindHoverIntent()
-							} else {
-								this.bindHoverIntent();
-								this.element[0].hoverIntent_s = 1
-							}
-							$(document).unbind("mousemove", this._registerMousePos)
+					//	Click event triggers panel open/close
+					$('.dreampanel .dreampanel-collapse i').on('click', function(e) {
+						e.preventDefault();
+
+						console.clear();
+
+						var _promises = [$_self, _options.$_title, _options.$_buddy];
+
+						if ($(this).hasClass('icon-flip-horizontal')) {
+							//	Close the panel...
+							$(this).removeClass('icon-flip-horizontal');
+
+							//	Stop anything going on now...
+							$([$_self, _options.$_title, _options.$_panelContent, _options.$_buddy]).clearQueue();
+
+							//	Hide the panel content, show the sideways thingy
+							_options.$_panelContent.hide();
+							_options.$_title.text(_options.collapsedTitle).animate({opacity: 1, duration: _options.showTitleSpeed});
+
+							//	Collapse the panel
+							$_self.animate({width: _options.collapsedWidth}, _options.collapseSpeed);
+
+							//	Slide the right side too
+							_options.$_buddy.animate({
+								width:    '+=' + ($(window).outerWidth() - _options.collapsedWidth) - _options.rightBorderWidth,
+								duration: _options.collapseSpeed
+							});
+						} else {
+							//	Open the panel
+							$(this).addClass('icon-flip-horizontal');
+
+							//	Only show content and title when complete...
+							_options.$_title.animate({opacity: 0, duration: _options.hideTitleSpeed});
+
+							$_self.stop().animate({
+								width:    _options.initialWidth,
+								duration: _options.openSpeed
+							}, function() {
+								_options.$_panelContent.show();
+							});
+
+							//	Shrink the right side dude too
+							_options.$_buddy.animate({width: _options.$_buddy.outerWidth() + _options.initialWidth}, _options.openSpeed);
 						}
-					}, this))
-				}, this))
+
+						//	Throw a resize when all animations are done...
+						$.when.apply($, _promises).done(function() {
+							console.info(arguments);
+
+							console.log('--------------------');
+							console.log('           [PROMISE]');
+							console.log('cWidth: ' + _options.currentWidth + ', cHeight: ' + _options.currentHeight + ', rightBorderWidth: ' + _options.rightBorderWidth);
+							console.log('--------------------');
+
+							$(window).trigger('resize');
+						});
+					});
+
+					//  Catch resize events
+					$(window).on('resize', function() {
+
+						_options.currentWidth = $_self.outerWidth();
+						_options.currentHeight = ( $(this).outerHeight() - _options.heightOffset);
+						_options.rightBorderWidth = $(this).outerWidth() - _options.initialWidth;
+
+						$_self.height(_options.currentHeight);
+						$(_self.rightBorder).width(_options.rightBorderWidth);
+
+						console.log('---------------------');
+						console.log('           [RESIZE]');
+						console.log('w.width: ' + $(window).outerWidth() + ', left.width: ' + $_self.outerWidth() + ', b.width: ' + _options.$_buddy.outerWidth());
+						console.info(arguments);
+						console.log('---------------------');
+						console.info(_options);
+
+					});
+
+					$(window).trigger('resize');
+				});
+			},
+
+			otherMethod: function(options) {
+				// Some logic
+				// Calling the function:
+				// jQuery(selector).otherMethod(options);
 			}
-		}, updateOffsets:         function(f) {
-			if (this.element.is(":visible")) {
-				var d = $("body").height() > $(window).height();
-				if (d) {
-					this.element.addClass("ui-sidebar-scrollable")
-				} else {
-					this.element.removeClass("ui-sidebar-scrollable")
-				}
-				if (this.isUndocked()) {
-					var c = this._getPlaceholder().offset().top;
-					var g = jQuery(window).scrollTop();
-					var h = Math.max(c - g, 0);
-					var b = d ? $(window).height() - h : Math.min(this._getPlaceholder().outerHeight(),
-						$(window).height() - this._getPlaceholder().offset().top);
-					var e = {top: h, height: b};
-					if (f) {
-						e.width = f
-					}
-					this.element.css(e)
-				}
-			}
-		}, _renderUnDock:         function() {
-			if (this.isDocked && !this.element.find(".ui-undock").size()) {
-				this.element.find(".ui-dock").remove();
-				this._renderDockingLink(this.options.undockText, this.options.undockTitle, "ui-undock")
-			}
-		}, _renderDock:           function() {
-			if (this.isUndocked() && !this.element.find(".ui-dock").size()) {
-				this.element.find(".ui-undock").remove();
-				this._renderDockingLink(this.options.dockText, this.options.dockTitle, "ui-dock")
-			}
-		}, _renderDockingLink:    function(e, d, b) {
-			var c = $("<a class='aui-button aui-button-subtle' href='#'/>").addClass(b).append($("<span class='icon'/>").text(e)).attr("title", d);
-			c.tipsy({trigger: "manual"}).hoverIntent({interval: 200, over: function() {
-				AJS.$(this).tipsy("show")
-			}, out:                                             function() {
-				AJS.$(this).tipsy("hide")
-			}});
-			this._getContents().find(this.options.toggleTarget).append(c)
-		}, renderDockState:       function() {
-			if (this.isDocked) {
-				this._renderUnDock()
-			} else {
-				this._renderDock()
-			}
-		}, _enableUndockedMode:   function(b) {
-			this.element.addClass(this.CLASS_NAMES.dreampanel);
-			if (!this.isUndocked()) {
-				this._getPlaceholder().insertBefore(this.element);
-				this.element.addClass(this.CLASS_NAMES.detached).addClass(this.CLASS_NAMES.collapsed).appendTo("body")
-			}
-			this.updateOffsets();
-			this._bindUnDockedEvents(b);
-			JIRA.bind(AJS.InlineLayer.EVENTS.show, this._handleDropdown)
-		}, _getPlaceholder:       function() {
-			if (!this.placeholder) {
-				this.placeholder = $("<div class='navigator-sidebar collapsed' />")
-			}
-			return this.placeholder
-		}, toggle:                function() {
-			if (!this.isExpanding() && !this.isCollapsing()) {
-				if (this.isDocked) {
-					this.element.find(".ui-undock").tipsy("hide").removeData("tipsy");
-					this.undock(false)
-				} else {
-					this.element.find(".ui-dock").tipsy("hide").removeData("tipsy");
-					this.dock(false)
-				}
-			}
-		}, undock:                function(b) {
-			if (!this.isUndocked()) {
-				this.isDocked = false;
-				this.options.persist(false);
-				this._getPlaceholder().insertBefore(this.element);
-				this.element.addClass(this._getUndockedClasses() + " " + this.CLASS_NAMES.expanded).appendTo("body");
-				if (b !== false && this.useTransitions) {
-					this._getPlaceholder().width(this.options.expandedWidth).animate({width: this.options.collapsedWidth}, 200)
-				} else {
-					this._getPlaceholder().width(this.options.collapsedWidth)
-				}
-				this.updateOffsets(this.options.expandedWidth);
-				this.collapse(b, _.bind(function() {
-					this._enableUndockedMode(false)
-				}, this))
-			}
-		}, dock:                  function(b) {
-			if (this.isUndocked()) {
-				this.isDocked = true;
-				this._unbindUnDockedEvents();
-				this.options.persist(true);
-				if (b !== false && this.useTransitions) {
-					this._getPlaceholder().animate({width: this.options.expandedWidth}, 200, _.bind(this._dockingComplete, this))
-				} else {
-					this._dockingComplete()
-				}
-			}
-		}, _dockingComplete:      function() {
-			this.element.removeClass(this._getUndockedClasses());
-			this.element.removeClass(this._getUndockedStates());
-			this.element.css({height: "", width: "", top: ""}).insertBefore(this._getPlaceholder());
-			this._getPlaceholder().remove();
-			this.options.renderExpanded(this.element);
-			this._renderUnDock();
-			JIRA.Issues.triggerHorizontalResize()
-		}, _getContents:          function() {
-			if (!this.element.find(".ui-sidebar-content").size()) {
-				this.element.wrapInner("<div class='ui-sidebar-content' />")
-			}
-			return this.element.find(".ui-sidebar-content")
-		}, expand:                function(b) {
-			if (this.isCollapsed()) {
-				this.updateOffsets();
-				if (b !== false && this.useTransitions) {
-					this._setUndockedState(this.CLASS_NAMES.expanding);
-					this.element.animate({width: this.options.expandedWidth}, 150, _.bind(function() {
-						this._setUndockedState(this.CLASS_NAMES.expanded);
-						this.options.renderExpanded(this.element);
-						this._renderDock();
-						this._getContents().css("opacity", 0).animate({opacity: 1}, 200, _.bind(this._expandingComplete, this))
-					}, this))
-				} else {
-					this.options.renderExpanded(this.element);
-					this._renderDock();
-					this._expandingComplete()
-				}
-			} else {
-				if (this.isCollapsing()) {
-					this.activityAfterTransition = "expand"
-				} else {
-					if (this.isExpanding()) {
-						this.activityAfterTransition = null
-					}
-				}
-			}
-		}, _expandingComplete:    function() {
-			JIRA.Issues.triggerHorizontalResize();
-			this._bindUnDockedEvents(true);
-			this._setUndockedState(this.CLASS_NAMES.expanded);
-			if (this.activityAfterTransition === "collapse") {
-				this.activityAfterTransition = null;
-				this.collapse(true)
-			}
-		}, collapse:              function(b, c) {
-			if (this.isExpanded()) {
-				if (b !== false && this.useTransitions) {
-					this._setUndockedState(this.CLASS_NAMES.collapsing);
-					this._getContents().animate({opacity: 0}, 150, _.bind(function() {
-						this.options.renderCollapsed(this.element);
-						this.element.width(this.options.expandedWidth);
-						this.element.animate({width: this.options.collapsedWidth}, 150, _.bind(function() {
-							this._collapsingComplete(c)
-						}, this))
-					}, this))
-				} else {
-					this.options.renderCollapsed(this.element);
-					this.element.width("");
-					this._collapsingComplete(c)
-				}
-			} else {
-				if (this.isExpanding()) {
-					this.activityAfterTransition = "collapse"
-				} else {
-					if (this.isCollapsing()) {
-						this.activityAfterTransition = null
-					}
-				}
-			}
-		}, _collapsingComplete:   function(b) {
-			this._setUndockedState(this.CLASS_NAMES.collapsed);
-			JIRA.Issues.triggerHorizontalResize();
-			this._bindUnDockedEvents(false);
-			if (this.activityAfterTransition === "expand") {
-				this.activityAfterTransition = null;
-				this.expand(true)
-			}
-			if (typeof b === "function") {
-				b()
-			}
-		}, isCollapsed:           function() {
-			return this.element.hasClass(this.CLASS_NAMES.collapsed)
-		}, isCollapsing:          function() {
-			return this.element.hasClass(this.CLASS_NAMES.collapsing)
-		}, isExpanded:            function() {
-			return this.element.hasClass(this.CLASS_NAMES.expanded)
-		}, isExpanding:           function() {
-			return this.element.hasClass(this.CLASS_NAMES.expanding)
-		}})
-}(jQuery));
+		});
+})({
+	//	Default options
+	initialWidth:           200,
+	collapsedWidth:         20,
+	collapsedTitle:         'DreamPanel',
+	currentWidth:           200,
+	currentHeight:          0,
+	rightBorder:            '.dreampanel-right-border',
+	rightBorderWidth:       0,
+	rightBorderWidthOffset: 12,
+	heightOffset:           8,
+	showTitleSpeed:         300,
+	hideTitleSpeed:         300,
+	collapseSpeed:          300,
+	openSpeed:              300
+
+}, jQuery, window, document);
